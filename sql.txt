@@ -1,0 +1,41 @@
+-- ----------------------------------------------------------------
+--  TABLE diary
+-- ----------------------------------------------------------------
+
+CREATE TABLE spring5fs.diary
+(
+   `ID`         INT(10) NOT NULL AUTO_INCREMENT,
+   `EMAIL`      VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   `REGDATE`    DATETIME(0) NULL,
+   `TITLE`      VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   `TEXT`       VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   `FILE`       VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   PRIMARY KEY(`ID`),
+   UNIQUE KEY `ID`(`ID`)
+)
+ENGINE INNODB
+COLLATE 'utf8_general_ci'
+ROW_FORMAT DEFAULT;
+
+
+-- ----------------------------------------------------------------
+--  TABLE member1
+-- ----------------------------------------------------------------
+
+CREATE TABLE spring5fs.member1
+(
+   `ID`          INT(10) NOT NULL AUTO_INCREMENT,
+   `EMAIL`       VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   `PASSWORD`    VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   `NAME`        VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   `REGDATE`     DATETIME(0) NULL,
+   `PHONENUM`    VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   `ADDRESS`     VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+   PRIMARY KEY(`ID`),
+   UNIQUE KEY `EMAIL`(`EMAIL`)
+)
+ENGINE INNODB
+COLLATE 'utf8_general_ci'
+ROW_FORMAT DEFAULT;
+
+
